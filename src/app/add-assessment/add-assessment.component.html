@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="card-panel">
+        <h3>Add new Assessment</h3>
+        <div class="input-field col s12">
+            <input type="text" name="note" [(ngModel)]="note">
+            <label>Assessment</label>
+        </div>
+                <div>
+          
+                    <button class="btn waves-effect waves-orange cyan darken-3" (click)="addAssessment()" ><i class="material-icons">add</i></button>
+                </div>
+            
+    </div>
+        <p>
+            <button class="btn waves-effect waves-orange cyan darken-3" routerLink="/allPatients"> Back </button>
+        </p>
+</div>
+          

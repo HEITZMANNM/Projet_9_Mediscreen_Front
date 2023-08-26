@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="card-panel">
+        <h3>Add new Patient</h3>
+        <div class="input-field col s12">
+            <input type="text" name="firstName" [(ngModel)]="firstName">
+            <label>Firstname</label>
+          </div>
+          <div class="input-field col s12">
+            <input type="text" name="lastName" [(ngModel)]="lastName">
+            <label >Lastname :</label>
+          </div>
+          <form [(ngModel)]="gender">
+          <p>
+            <label>
+              <input name="gender" type="radio" checked  [(ngModel)]="gender" value="M"/>
+              <span>Man</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input name="gender" type="radio" [(ngModel)]="gender"  value="F"/>
+              <span>Woman</span>
+            </label>
+          </p>
+        </form>
+          <div class="input-field col s12">
+            <input  type="text" name="address" [(ngModel)]="address">
+            <label >Address :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  type="text" name="phoneNumber" [(ngModel)]="phoneNumber">
+            <label >Phone :</label>
+          </div>
+          <div class="input-field col s12">
+            <input  type="date" name="birthDate" [(ngModel)]="birthDate">
+            <label >Birth date :</label>
+          </div>
+        <button class="btn waves-effect waves-orange cyan darken-3" (click)="addPatient()" ><i class="material-icons">add</i></button>
+    </div>
+
+</div>
+<button class="btn waves-effect waves-orange cyan darken-3" routerLink="/home"> Back </button>

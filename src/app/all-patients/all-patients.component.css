@@ -1,0 +1,15 @@
+.menu-toggler{
+    padding: 10px;
+
+}
+
+.menu{
+   
+    padding: 10px;
+}
+
+.menu-item{
+    cursor: pointer;
+    padding: 5px 0;
+}
+

@@ -1,0 +1,25 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="card-panel">
+        <h3>Edit Patient</h3>
+          <div class=" col s12">
+            <label >Lastname :</label>
+            <input type="text" name="lastName" [(ngModel)]="lastName">
+           
+          </div>
+          <div class=" col s12">
+            <label >Address :</label>
+            <input  type="text" name="address" [(ngModel)]="address">
+           
+          </div>
+          <div class="col s12">
+            <label >Phone :</label>
+            <input  type="text" name="phoneNumber" [(ngModel)]="phoneNumber">
+            
+          </div>
+        <button class="btn waves-effect waves-orange cyan darken-3" (click)="editPatient()"><i class="material-icons">edit</i></button>
+    </div>
+
+</div>
+<button class="btn waves-effect waves-orange cyan darken-3" routerLink="/allPatients"> Back </button>
