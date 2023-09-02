@@ -1,4 +1,4 @@
-FROM node:latest as  build
+FROM node:latest as build
 WORKDIR /usr/local/app
 COPY ./ /usr/local/app/
 RUN npm install
@@ -7,4 +7,4 @@ RUN npm run build
 
 FROM nginx:latest
 COPY --from=build /usr/local/app/dist/app-patient-front /usr/share/nginx/html
-Expose 4200
+EXPOSE 4200
