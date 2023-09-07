@@ -13,8 +13,11 @@ export class EditPatientComponent implements OnInit{
 
 
   lastName!: string;
+  firstName!: string;
   address!: string;
   phoneNumber!: string;
+  gender!: string;
+  birthDate!: Date;
 
   patient!: Patient;
   updatedPatient!: Patient;
@@ -36,6 +39,9 @@ this.patient = new Patient("7", "firstNameTest", "lestNameTest", new Date, "M", 
         this.patient = data
       this.address = this.patient.address;
       this.lastName = this.patient.lastName;
+      this.firstName= this.patient.firstName;
+      this.birthDate =  this.patient.birthDate;
+      this.gender = this.patient.gender;
       this.phoneNumber = this.patient.phoneNumber;
 
       });
@@ -47,10 +53,11 @@ this.patient = new Patient("7", "firstNameTest", "lestNameTest", new Date, "M", 
   editPatient(){
 
     
-if(this.lastName != null && this.address!= null && this.phoneNumber!= null){
+if(this.lastName != null && this.address!= null && this.phoneNumber!= null && this.firstName!=null && this.gender!=null 
+  && this.birthDate!=null){
  
 
-this.updatedPatient = new Patient(this.patient.id, this.patient.firstName, this.lastName, this.patient.birthDate, this.patient.gender, this.address, this.phoneNumber);
+this.updatedPatient = new Patient(this.patient.id, this.firstName, this.lastName, this.birthDate, this.gender, this.address, this.phoneNumber);
 
 console.log("valeur address : "+this.updatedPatient.address);
 

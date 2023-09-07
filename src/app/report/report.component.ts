@@ -48,17 +48,8 @@ export class ReportComponent implements OnInit{
  
 
   generateReport(){
-
-    var dateFormat = this.patient.birthDate.toString();
-
-    var dateCut = dateFormat.substr(0, 10);
-
-    var re = /-/gi;
-
-    this.birthdate = dateCut.replace(re, '/');
-
   
-return this.reportService.generateReport(this.birthdate, this.patient.gender, this.assessments).subscribe(data =>{
+return this.reportService.generateReport(this.patient.birthDate.toString(), this.patient.gender, this.assessments).subscribe(data =>{
   this.report = data});
   }
 
